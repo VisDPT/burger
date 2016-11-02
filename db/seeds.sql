@@ -1,8 +1,8 @@
 -- Inserting ToDo Items into the Table
-USE burgers_todo_db;
-INSERT INTO burgersOrToDo (toDoItem, completed) 
+USE not_Burgers_todo_db;
+INSERT INTO ToDoList (toDoItem, completed) 
 VALUES ("Go Shopping", false),
        ("Walk The Dog", false), 
        ("Do the Dishes", true);
        
-SELECT * FROM burgers_todo_db.burgersOrToDo; 
+SELECT * FROM not_Burgers_todo_db.ToDoList; 
