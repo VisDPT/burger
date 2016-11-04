@@ -3,7 +3,7 @@ var orm = require('../config/orm.js');
 /*
 Here is where you setup a model for how to interface with the database.
 */
-var toDosNotBurger = {
+var burger = {
     selectAll: function(cb) {
         orm.selectAll('toDo', function(res) {
             cb(res);
@@ -22,4 +22,4 @@ var toDosNotBurger = {
 }
 
 
-module.exports = toDosNotBurger;
+module.exports = burger;
