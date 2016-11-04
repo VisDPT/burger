@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
 //----------- SELECT ALL
 router.get('/toDo', function(req, res) {
     burger.selectAll(function(data) {
-        var hbsObject = { burger: data };
+        var hbsObject = { toDo: data };
         console.log(hbsObject);
         res.render('index', hbsObject);
     });
@@ -31,7 +31,7 @@ router.put('/toDo/update/:id', function(req, res) {
 
     console.log('condition', condition);
 
-    burger.updateOne({ toDoItem: req.body.toDoItem }, condition, function() {
+    burger.updateOne({ toDoItem: req.body.burger }, condition, function() {
         res.redirect('/toDo');
     });
 });

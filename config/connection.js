@@ -2,14 +2,14 @@
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    port: 3306,
+    // port: 3000,
     host: 'localhost',
     user: 'root',
-    password: 'uma1234'
+    password: 'uma1234',
     database: 'not_Burgers_todo_db'
 });
 
-connection.connec(function(err) {
+connection.connect(function(err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
         return;
