@@ -1,5 +1,4 @@
-//importing (require) connection.js into orm.js
-var connection = ('../config/connection.js');
+var connection = require('../config/connection.js');
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -35,7 +34,7 @@ var orm = {
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);
-            console.log(result);
+            //console.log(result);
         });
     },
     insertOne: function(table, cols, vals, cb) {
@@ -53,7 +52,7 @@ var orm = {
         connection.query(queryString, vals, function(err, result) {
             if (err) throw err;
             cb(result);
-            console.log(result);
+            //console.log(result);
         });
     },
     updateOne: function(table, objColVals, condition, cb) {
@@ -68,7 +67,7 @@ var orm = {
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result);
-            console.log(result);
+            //console.log(result);
         });
     }
 };

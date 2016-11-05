@@ -20,18 +20,18 @@ router.get('/burgers', function(req, res) {
 
 //----------- INSERT ONE/ CREATE ONE
 router.post('/burgers/create', function(req, res) {
-    burger.insertOne(['toDoItem', 'completed'], [req.body.toDoItem, req.body.completed], function() {
+    burger.insertOne(['toDoItem', 'status'], [req.body.toDoItem, req.body.status], function() {
         res.redirect('/burgers');
     });
 });
 
 //----------- UPDATE ONE
 router.put('/burgers/update/:id', function(req, res) {
-    var condition = 'id = ' + req.params.ID;
+    var number = 'id = ' + req.params.ID;
 
-    console.log('condition:', condition);
+    console.log('number:', number);
 
-    burger.updateOne({ toDoItem: req.body.toDoItem }, condition, function() {
+    burger.updateOne({ status: req.body.status }, number, function() {
         res.redirect('/burgers');
     });
 });

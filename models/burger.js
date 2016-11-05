@@ -5,17 +5,17 @@ Here is where you setup a model for how to interface with the database.
 */
 var burger = {
     selectAll: function(cb) {
-        orm.selectAll('toDo', function(res) {
+        orm.selectAll('burgers', function(res) {
             cb(res);
         });
     },
     insertOne: function(cols, vals, cb) {
-        orm.insertOne('toDo', cols, vals, function(res) {
+        orm.insertOne('burgers', cols, vals, function(res) {
             cb(res);
         });
     },
-    updateOne: function(objColVals, condition, cb) {
-        orm.updateOne('toDo', objColVals, condition, function(res) {
+    updateOne: function(objColVals, status, cb) {
+        orm.updateOne('burgers', objColVals, status, function(res) {
             cb(res);
         });
     }

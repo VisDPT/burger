@@ -3,73 +3,74 @@
 <h1>MY TO DO LIST!</h1>
 
 <h2>What all do I need to Accomplish today?</h2>
-<!--
-<ul>
-  {{#each toDo}}
-    {{#unless this.burger}}c
-      <li>
-        {{this.name}}
 
-        <form action="toDo/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
-          <button type="submit">SLEEP TIME!</button>
+
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.status}}
+      <li>
+        {{this.toDoItem}}
+
+        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="status" value="true">
+          <button type="submit">COMPLETED!</button>
         </form>
 
-        {{> cats/delete-cat}}
+        {{> burger/delete-burger}}
       </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>COMPLETED TASKS/Cats that are sleepy!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if this.sleepy}}
+  {{#each burgers}}
+    {{#if this.status}}
       <li>
-        {{this.name}}
+        {{this.toDoItem}}
 
-        <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="false">
-          <button type="submit">WAKE UP!</button>
+        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="status" value="false">
+          <button type="submit">INCOMPLETE!</button>
         </form>
 
-        {{> cats/delete-cat}}
+        {{> burgers/delete-burger}}
       </li>
     {{/if}}
   {{/each}}
 </ul>
 
-
-
-
-
-
--->
-
-
-
-
-
-
-
-<h2>Add a Task To Do</h2>
-<form class="create-update-form" action="/toDo/create" method="POST">
+<h2>Add a TASK</h2>
+<form class="create-update-form" action="burgers/create" method="POST">
 
   <div class="form-group">
-        	<textarea type="text" name="tast"></textarea>
-
-<!--
-    <label for="item">Item:</label>
-    <input type="text" id="item" name="name"> -->
+    <label for="task">TASK:</label>
+    <input type="text" id="task" name="name">
   </div>
 
   <div class="form-group">
-    <label for="status">Completed?</label><br>
-    <input type="radio" name="complete" value="1" checked> Complete!<br>
-    <input type="radio" name="incomplete" value="0"> Incomplete!
+    <label for="ci">Complete or Incpmplete?</label><br>
+    <input type="radio" name="status" value="1" checked> incomplete!<br>
+    <input type="radio" name="status" value="0"> Complete
   </div>
 
   <button type="submit">Add Task</button>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
