@@ -39,3 +39,7 @@
     .form-group {
         margin-bottom: 5px;
     }
+    
+    #addTask {
+        width: 100%;
+    }
