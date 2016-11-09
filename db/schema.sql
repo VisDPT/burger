@@ -3,7 +3,7 @@ CREATE DATABASE not_Burgers_todo_db;
 USE not_Burgers_todo_db;
 
 -- Creating Table
-CREATE TABLE ToDoList (
+CREATE TABLE burgers (
 ID INTEGER(11) AUTO_INCREMENT NOT NULL,
 toDoItem VARCHAR (200) NOT NULL,
 completed BOOLEAN NOT NULL DEFAULT 0,

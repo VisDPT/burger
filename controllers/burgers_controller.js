@@ -36,4 +36,13 @@ router.put('/burgers/update/:id', function(req, res) {
     });
 });
 
+//--------------- DELETE ONE
+router.delete('/burgers/delete/:id', function(req, res) {
+    var status = 'id = ' + req.params.ID;
+
+    cat.delete(status, function() {
+        res.redirect('/burgers');
+    });
+});
+
 module.exports = router;

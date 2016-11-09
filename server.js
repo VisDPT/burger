@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-// override with POST having ?_method=DELETE
+// override with POST haaving ?_method=DELETE
 
 //method override
 app.use(methodOverride('_method'));
@@ -27,6 +27,12 @@ app.use('/', routes);
 
 
 //Server: binds to port 3000
-var port = process.env.PORT || 3000;
-//var port = 3000;
-app.listen(port);
+//var port = process.env.PORT || 3000;
+var port = 3000;
+//app.listen(port);
+
+
+app.listen(port, function() {
+    //if (err) throw err;
+    console.log('listening on' + port)
+});

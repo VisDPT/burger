@@ -1,19 +1,24 @@
-li {
-    background: #FAEBD7;
-    margin: 5px;
-    padding: 5px;
-}
-
-.label {
-    font-weight: bold;
-}
-
-.create-update-form {
-    background: aqua;
-    margin: 5px;
-    padding: 5px;
-}
-
-.form-group {
-    margin-bottom: 5px;
-}
+    body {
+        background-image: url(../img/background.jpg);
+        background-size: 100%, 75%;
+    }
+    
+    li {
+        background: #FAEBD7;
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .label {
+        font-weight: bold;
+    }
+    
+    .create-update-form {
+        background: yellow;
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .form-group {
+        margin-bottom: 5px;
+    }

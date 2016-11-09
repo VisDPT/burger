@@ -18,6 +18,11 @@ var burger = {
         orm.updateOne('burgers', objColVals, status, function(res) {
             cb(res);
         });
+    },
+    delete: function(status, cb) {
+        orm.delete('burgers', status, function(res) {
+            cb(res);
+        });
     }
 };
 
