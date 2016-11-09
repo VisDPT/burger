@@ -30,10 +30,8 @@
   {{#each burgers}}
     {{#if this.incomplete}}
       <li>
-        {{this.ID}}
-        {{this.task}}
-                {{this.completed}}
-                        {{this.date}}
+       <p class= "toDo"> {{this.ID}} {{this.task}} </p>
+            <p> Created : {{this.date}} </p>
 
         <form action="burgers/update/{{this.ID}}?_method=PUT" method="POST">
           <input type="hidden" name="status" value="false">
