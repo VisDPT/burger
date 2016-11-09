@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     // port: 3000,
     host: 'localhost',
     user: 'root',
-    password: 'uma1234',
+    password: 'Aji1234',
     database: 'not_Burgers_todo_db'
 });
 
@@ -17,4 +17,4 @@ connection.connect(function(err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-module.exports = connection; 
+module.exports = connection;

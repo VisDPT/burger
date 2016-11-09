@@ -8,35 +8,35 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless this.status}}
+    {{#unless this.incomplete}}
       <li>
-        {{this.toDoItem}}
+        {{this.task}}
 
-        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="status" value="true">
+        <form action="burgers/update/{{this.ID}}?_method=PUT" method="POST">
+          <input type="hidden" name="incomplete" value="true">
           <button type="submit">COMPLETED!</button>
         </form>
 
-        {{> burger/delete-burger}}
+        <!--{{> burger/delete-burger}} -->
       </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>COMPLETED TASKS/Cats that are sleepy!</h2>
+<h2>COMPLETED TASKS</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if this.status}}
+    {{#if this.incomplete}}
       <li>
-        {{this.toDoItem}}
+        {{this.task}}
 
-        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+        <form action="burgers/update/{{this.ID}}?_method=PUT" method="POST">
           <input type="hidden" name="status" value="false">
           <button type="submit">INCOMPLETE!</button>
         </form>
 
-        {{> burgers/delete-burger}}
+<!--        {{> burgers/delete-burger}}  -->
       </li>
     {{/if}}
   {{/each}}
@@ -46,31 +46,15 @@
 <form class="create-update-form" action="burgers/create" method="POST">
 
   <div class="form-group">
-    <label for="task">TASK:</label>
-    <input type="text" id="task" name="name">
+    <label for="ta">TASK:</label>
+    <input type="text" id="ta" name="task">
   </div>
 
   <div class="form-group">
-    <label for="ci">Complete or Incpmplete?</label><br>
+    <label for="ci">Complete or Incomplete?</label><br>
     <input type="radio" name="status" value="1" checked> incomplete!<br>
     <input type="radio" name="status" value="0"> Complete
   </div>
 
   <button type="submit">Add Task</button>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
