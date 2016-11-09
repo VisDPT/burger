@@ -1,12 +1,23 @@
     body {
-        background-image: url(../img/background.jpg);
-        background-size: 100%, 75%;
+        background-image: url(../img/ocean.jpg);
+        background-size: 100%, 120%;
+        background-repeat: no-repeat;
     }
     
     li {
-        background: lightblue;
+        background: white;
+        opacity: .7;
         margin: 5px;
         padding: 5px;
+    }
+    
+    h1 {
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    h2 {
+        text-align: center;
     }
     
     .toDo {

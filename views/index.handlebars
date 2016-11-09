@@ -27,9 +27,11 @@
 <h2>COMPLETED TASKS</h2>
 
 <ul>
+  
   {{#each burgers}}
     {{#if this.incomplete}}
       <li>
+        <div class ="item">
        <p class= "toDo"> {{this.ID}} {{this.task}} </p>
             <p> Created : {{this.date}} </p>
 
@@ -39,12 +41,14 @@
         </form>
 
         {{> burgers/delete-burger}} 
+        </div>
       </li>
     {{/if}}
   {{/each}}
+  
 </ul>
 
-<h2>Add a TASK</h2>
+<h3>Add a TASK</h3>
 <form class="create-update-form" action="burgers/create" method="POST">
 
   <div class="form-group">
