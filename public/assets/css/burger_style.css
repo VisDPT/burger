@@ -4,10 +4,14 @@
     }
     
     li {
-        background: #FAEBD7;
+        background: lightblue;
         margin: 5px;
         padding: 5px;
+    }
+    
+    .toDo {
         font-size: 20px;
+        font-weight: bold;
     }
     
     .label {
@@ -15,7 +19,7 @@
     }
     
     .create-update-form {
-        background: yellow;
+        background: aqua;
         margin: 5px;
         padding: 5px;
     }
