@@ -28,20 +28,20 @@ router.post('/burgers/create', function(req, res) {
 
 //----------- UPDATE ONE
 router.put('/burgers/update/:id', function(req, res) {
-    var status = 'id = ' + req.params.ID;
+    var condition = 'id = ' + req.params.ID;
 
-    console.log('completed:', completed);
+    console.log('condition:', condition);
 
-    burger.updateOne({ completed: req.body.completed }, completed, function() {
+    burger.updateOne({ completed: req.body.completed }, condition, function() {
         res.redirect('/burgers');
     });
 });
 
 //--------------- DELETE ONE
 router.delete('/burgers/delete/:id', function(req, res) {
-    var status = 'id = ' + req.params.ID;
+    var condition = 'id = ' + req.params.ID;
 
-    burger.delete(status, function() {
+    burger.delete(condition, function() {
         res.redirect('/burgers');
     });
 });

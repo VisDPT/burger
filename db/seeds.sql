@@ -6,3 +6,4 @@ VALUES ("Go Shopping", false),
        ("Do the Dishes", true);
        
 SELECT * FROM not_Burgers_todo_db.burgers; 
+
