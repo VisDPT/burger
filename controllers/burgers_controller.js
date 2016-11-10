@@ -20,8 +20,9 @@ router.get('/burgers', function(req, res) {
 
 //----------- INSERT ONE/ CREATE ONE
 router.post('/burgers/create', function(req, res) {
-    burger.insertOne(['task', 'incomplete'], [req.body.task, req.body.incomplete], function() {
+    burger.insertOne(['task', 'completed'], [req.body.task, req.body.completed], function() {
         res.redirect('/burgers');
+
     });
 });
 
@@ -29,9 +30,9 @@ router.post('/burgers/create', function(req, res) {
 router.put('/burgers/update/:id', function(req, res) {
     var status = 'id = ' + req.params.ID;
 
-    console.log('status:', status);
+    console.log('completed:', completed);
 
-    burger.updateOne({ incomplete: req.body.incomplete }, status, function() {
+    burger.updateOne({ completed: req.body.completed }, completed, function() {
         res.redirect('/burgers');
     });
 });
@@ -40,7 +41,7 @@ router.put('/burgers/update/:id', function(req, res) {
 router.delete('/burgers/delete/:id', function(req, res) {
     var status = 'id = ' + req.params.ID;
 
-    cat.delete(status, function() {
+    burger.delete(status, function() {
         res.redirect('/burgers');
     });
 });

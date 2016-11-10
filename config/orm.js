@@ -55,13 +55,13 @@ var orm = {
             //console.log(result);
         });
     },
-    updateOne: function(table, objColVals, status, cb) {
+    updateOne: function(table, objColVals, completed, cb) {
         var queryString = 'UPDATE ' + table;
 
         queryString += ' SET ';
         queryString += objToSql(objColVals);
         queryString += ' WHERE ';
-        queryString += status;
+        queryString += completed;
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {
@@ -70,10 +70,10 @@ var orm = {
             //console.log(result);
         });
     },
-    delete: function(table, status, cb) {
+    delete: function(table, completed, cb) {
         var queryString = 'DELETE FROM ' + table;
         queryString = queryString + ' WHERE ';
-        queryString = queryString + status;
+        queryString = queryString + completed;
 
         connection.query(queryString, function(err, result) {
             if (err) throw err;

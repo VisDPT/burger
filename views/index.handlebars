@@ -49,7 +49,7 @@
 </ul>
 
 <h3>Add a TASK</h3>
-<form class="create-update-form" id= "addTask" action="burgers/create" method="POST">
+<form class="create-update-form" id= "addTask" action="/burgers/create" method="POST">
 
   <div class="form-group">
     <label for="ta">TASK:</label>
@@ -58,8 +58,8 @@
 
   <div class="form-group">
     <label for="ci">Complete or Incomplete?</label><br>
-    <input type="radio" name="status" value="1" checked> incomplete!<br>
-    <input type="radio" name="status" value="0"> Complete
+    <input type="radio" name="status" value="true" > incomplete!<br>
+    <input type="radio" name="status" value="false"> Complete <br>
   </div>
 
   <button type="submit">Add Task</button>
