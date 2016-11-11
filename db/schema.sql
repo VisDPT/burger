@@ -12,4 +12,6 @@ PRIMARY KEY (ID)
 );
 
 
+SELECT * FROM not_Burgers_todo_db.burgers;
+
 

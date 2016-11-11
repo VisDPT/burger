@@ -1,5 +1,3 @@
-
-
 <h1>MY TO DO LIST!</h1>
 
 <h2>What all do I need to Accomplish today?</h2>
@@ -48,8 +46,9 @@
   
 </ul>
 
-<h3>Add a TASK</h3>
+
 <form class="create-update-form" id= "addTask" action="/burgers/create" method="POST">
+<h3>Add a TASK</h3>
 
   <div class="form-group">
     <label for="ta">TASK:</label>
@@ -59,8 +58,8 @@
   <div class="form-group">
     <label for="ci">Complete or Incomplete?</label><br>
     <input type="radio" name="status" value="1" > incomplete!<br>
-    <input type="radio" name="status" value="0"> Complete <br>
-  </div>
+    <!-- <input type="radio" name="status" value="0"> Complete <br>
+  </div> -->
 
   <button type="submit">Add Task</button>
 </form>

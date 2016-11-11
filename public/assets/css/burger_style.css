@@ -1,7 +1,7 @@
     body {
         background-image: url(../img/ocean.jpg);
         background-size: 100%, 120%;
-        background-repeat: no-repeat;
+        /*        background-repeat: no-repeat; */
     }
     
     li {
@@ -14,10 +14,19 @@
     h1 {
         text-decoration: underline;
         text-align: center;
+        font-size: 40px;
+        color: white;
     }
     
     h2 {
         text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+    
+    h3 {
+        text-decoration: underline;
+        font-size: 32px;
     }
     
     .toDo {
