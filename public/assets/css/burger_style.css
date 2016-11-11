@@ -1,6 +1,6 @@
     body {
-        background-image: url(../img/ocean.jpg);
-        background-size: 100%, 120%;
+        background-image: url(../img/whimsy.jpg);
+        /*background-size: 100%, 120%;*/
         /*        background-repeat: no-repeat; */
     }
     
@@ -15,7 +15,7 @@
         text-decoration: underline;
         text-align: center;
         font-size: 40px;
-        color: white;
+        /*color: white;*/
     }
     
     h2 {
