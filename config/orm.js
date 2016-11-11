@@ -55,13 +55,13 @@ var orm = {
             //console.log(result);
         });
     },
-    updateOne: function(table, objColVals, completed, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
         var queryString = 'UPDATE ' + table;
 
         queryString += ' SET ';
         queryString += objToSql(objColVals);
         queryString += ' WHERE ';
-        queryString += completed;
+        queryString += condition;
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {
@@ -69,16 +69,16 @@ var orm = {
             cb(result);
             //console.log(result);
         });
-    },
-    delete: function(table, completed, cb) {
-        var queryString = 'DELETE FROM ' + table;
-        queryString = queryString + ' WHERE ';
-        queryString = queryString + completed;
+        // },
+        // delete: function(table, condition, cb) {
+        //     var queryString = 'DELETE FROM ' + table;
+        //     queryString = queryString + ' WHERE ';
+        //     queryString = queryString + condition;
 
-        connection.query(queryString, function(err, result) {
-            if (err) throw err;
-            cb(result);
-        });
+        //     connection.query(queryString, function(err, result) {
+        //         if (err) throw err;
+        //         cb(result);
+        //     });
     }
 };
 

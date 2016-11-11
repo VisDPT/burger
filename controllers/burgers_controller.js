@@ -27,23 +27,23 @@ router.post('/burgers/create', function(req, res) {
 });
 
 //----------- UPDATE ONE
-router.put('/burgers/update/:id', function(req, res) {
+router.put('/burgers/update/:ID', function(req, res) {
     var condition = 'id = ' + req.params.ID;
 
-    console.log('condition:', condition);
+    console.log('condition', condition);
 
     burger.updateOne({ completed: req.body.completed }, condition, function() {
         res.redirect('/burgers');
     });
 });
 
-//--------------- DELETE ONE
-router.delete('/burgers/delete/:id', function(req, res) {
-    var condition = 'id = ' + req.params.ID;
+// //--------------- DELETE ONE
+// router.delete('/burgers/delete/:id', function(req, res) {
+//     var condition = 'id = ' + req.params.ID;
 
-    burger.delete(condition, function() {
-        res.redirect('/burgers');
-    });
-});
+//     burger.delete(condition, function() {
+//         res.redirect('/burgers');
+//     });
+// });
 
 module.exports = router;

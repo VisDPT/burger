@@ -14,16 +14,16 @@ var burger = {
             cb(res);
         });
     },
-    updateOne: function(objColVals, status, cb) {
-        orm.updateOne('burgers', objColVals, status, function(res) {
+    updateOne: function(objColVals, condition, cb) {
+        orm.updateOne('burgers', objColVals, condition, function(res) {
             cb(res);
         });
     },
-    delete: function(status, cb) {
-        orm.delete('burgers', status, function(res) {
-            cb(res);
-        });
-    }
+    // delete: function(status, cb) {
+    //     orm.delete('burgers', status, function(res) {
+    //         cb(res);
+    //     });
+    // }
 };
 
 
